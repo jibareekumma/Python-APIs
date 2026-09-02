@@ -4,7 +4,9 @@ from rest_framework import serializers
 from .models import Drinks
 
 
-class DrinkSerializer(serializers.ModelSerializers):
+class DrinkSerializer(serializers.ModelSerializer):
     class Meta:
         model = Drinks
-        field = ['id', 'name', 'description']
+        fields = ['id', 'name', 'description']
+
+        
